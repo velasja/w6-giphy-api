@@ -31,7 +31,12 @@ body {
 
 .item {
 	float:left;
-	margin:0 15px;
+	margin:3px 15px;
+	border-style: solid;
+	border-color: white;
+	border-radius: 2px;
+	text-align:center;
+	background-color:white;
 }
 
 .form-group {
@@ -41,3 +46,5 @@ body {
 h2 {
 	margin:0 0 4px 0;
 }
+
+	
