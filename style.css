@@ -1,0 +1,43 @@
+body {
+	background-color:yellow;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size:27px;
+}
+
+.btn-default {
+	color:yellow;
+	font-weight: bold;
+	background-color:black;
+	margin:0 3px;
+}
+
+.container {
+	width:100%;
+	display: block;
+	margin: 5px 0;
+}
+
+#btn-container {
+	width:75%;
+}
+
+#searchbar {
+	width:25%;
+}
+
+#showGIFs {
+	margin:auto;
+}
+
+.item {
+	float:left;
+	margin:0 15px;
+}
+
+.form-group {
+	margin: auto;
+}
+
+h2 {
+	margin:0 0 4px 0;
+}
