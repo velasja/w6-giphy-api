@@ -28,8 +28,8 @@ $(document).ready(function(){
 			    console.log(queryURL);
 		
 		    $.ajax({
-	      	url: queryURL,
-	      	method: "GET"
+		      	url: queryURL,
+		      	method: "GET"
 	    	})
 	    	.done(function(response) {
 		      	var results = response.data;
