@@ -1,6 +1,6 @@
 // Global variables
 $(document).ready(function(){
-	
+
 	// var topics = {
 	// 	name: ["Messi",
 	// 	"Iniesta",
@@ -22,14 +22,14 @@ $(document).ready(function(){
 		$("button#player-button").click(function(e){
 			e.preventDefault();
 			console.log('clicked');
-		
+
 			clearBtn();
 
 			person = $(this).data("person");
-			queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+			queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
 			    person + "&api_key=dc6zaTOxFJmzC&limit=10";
 			    console.log(queryURL);
-		
+
 		    $.ajax({
 		      	url: queryURL,
 		      	method: "GET"
@@ -37,7 +37,7 @@ $(document).ready(function(){
 	    	.done(function(response) {
 		      	var results = response.data;
 		    	  	// console.log(person);
-	        	
+
 
 	        	for (var i = 0; i < results.length; i++) {
 	    	        var gifDiv = $("<div class='item'>");
@@ -58,9 +58,9 @@ $(document).ready(function(){
 
 	    	        $("#showGIFs").prepend(gifDiv);
 	    	    };
-	    	
+
 	    		$(".gif").on("click", function() {
-	    		 
+
 	    		  	var state = $(this).attr( "data-state" );
 
 	    		    if (state === "still"){
@@ -71,7 +71,7 @@ $(document).ready(function(){
 	    		      $(this).attr("data-state", "still");
 	    		    }
 
-	    		    
+
 	    		});
 
 			});
@@ -88,8 +88,8 @@ $(document).ready(function(){
 		// 	};
 			searchTerm = $("#scriptBox").val().trim();
 			console.log(searchTerm);
-	
-			$("#btn-container").append("<button type='button' id='player-button' class='btn btn-default' data-person='"+searchTerm+"'>"+searchTerm+"</button>");		
+
+			$("#btn-container").append("<button type='button' id='player-button' class='btn btn-default' data-person='"+searchTerm+"'>"+searchTerm+"</button>");
 		// });
 		// });
 			mainFn();
@@ -125,4 +125,3 @@ $(document).ready(function(){
 			};
 		});
 })
-
